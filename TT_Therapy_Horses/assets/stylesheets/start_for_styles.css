@@ -1,0 +1,13 @@
+/************************************************************************************************************************
+UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - UNIVERSAL - U
+************************************************************************************************************************/
+
+
+/*Add to beginning of all CSS you use in your styles.css */
+* {
+    text-decoration: none;
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
