@@ -137,6 +137,14 @@ img {
      margin: 0 auto;
 }
 
+strong {
+     font-weight: bold;
+}
+
+em {
+     font-style: italic;
+}
+
 /* Wrapper to prevent content touching edges */
 section {
      width: 90%;
@@ -224,13 +232,33 @@ nav {
      align-items: center;
 }
 
+/* Heather requested this be removed */
+/*
 .horse img {
      width: 300px;
      height: 300px;
      object-fit: cover;
+     object-position: center;
      border-radius: 50%;
      border: 5px solid #f0f0f0;
      margin-bottom: 20px;
+}
+*/
+
+/* New CSS for more rectangular, full picture of horses */
+/* This version does not have object-fit, object-position, border-radius: 50%, fixed-dimensions, or thick-grey border */
+.horse img {
+     width: 100%; /* Makes image fill width of card */
+     max-width: 100%; /* Ensures it doesn't overflow */
+     height: auto; /* Maintains the natural aspect ration (no squish or crop) */
+     border-radius: 12px; /* Optional setting: Adds a slight rounding to match the card corners */
+     box-shadow: 0 4px 8px rgba(0, 0,  0, 0.1); /* Optional: adds a little shadow and pop */
+     margin-bottom: 25px;
+}
+
+
+.fabio > img {
+     object-fit: fill;
 }
 
 /* -- Gallery Grid -- */
@@ -303,10 +331,11 @@ section.gallery p {
      align-items: center;
      gap: 30px;
      margin-top: 40px;
+     font-size: 22px;
 }
 
 .qr-code {
-     width: 200px;
+     width: 400px;
      height: auto;
 }
 
@@ -359,6 +388,63 @@ section.gallery p {
      margin: 0; /* remove any previous margins */
 }
 
+/* --- Media Page --- */
+/* The wrapper (the "Card")*/
+.media-feature {
+     background: var(--white);
+     border-radius: 15px;
+     padding: 30px;
+     margin: 40px auto;
+     max-width: 900px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+     border: 1px solid var(--pale-pink);
+     display: flex;
+     flex-direction: column; /* Stacks the header, scroll-box, and caption */
+}
+
+/* The scolling window (the "Glass") */
+.scroll-window {
+     height: 500px; /* How tall the viewing area is */
+     overflow-y: auto; /* Shows scrollbar only as needed */
+     border: 2px solid var(--pale-pink);
+     border-radius: 8px;
+     background: #f9f9f9;
+
+     /* Smooth scrolling for mobile */
+     -webkit-overflow-scrolling: touch;
+}
+
+.caption-box {
+     padding-top: 25px; /* creates whitespace that's needed */
+     border-top: 1px solid #f0f0f0; /* Optional: adds a subtle line between scroll and text. May take this out */
+     margin-top: 10px;
+}
+
+/* The Caption below the scroll box */
+.caption-box p {
+     font-size: 1.2rem;
+     color: var(--text-color);
+     margin-bottom: 0;
+     text-align: left;
+}
+
+/* Styling the actual link at the bottom */
+.article-link {
+     display: inline-block;
+     margin-top: 5px;
+     color: var(--dark-turqoise);
+     text-decoration: underline;
+     font-weight: 700; 
+     font-size: 1.3rem; /* Slightly larger than standard text */
+     transition: colo 0.3s ease;
+}
+
+.article-link:hover {
+     color: var(--light-turqoise);
+     text-decoration: none; 
+}
+
+
 /******************************************
 /* FOOTER
 /*******************************************/
@@ -401,6 +487,14 @@ footer {
      width: 50px;
      height: 50px;
      margin: 5px;
+}
+
+.footer-side a{
+     color: white;
+     padding: 12px 25px;
+     border-radius: 50px;
+     transition: all 0.3s ease;
+     white-space: nowrap;
 }
 
 /******************************************
