@@ -1,12 +1,5 @@
 // Toggle menu function
 
-/*
-function toggleMenu() {
-    var links = document.getElementById("navLinks");
-    links.classList.toggle("active");
-}
-*/
-
 // Toggle hamburger menu
 function toggleMenu() {
     const links = document.getElementById("navLinks");

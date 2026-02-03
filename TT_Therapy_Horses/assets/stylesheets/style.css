@@ -13,12 +13,18 @@
      --dark-turqoise: #005461;
      --nav-padding: 20px;
 } 
+
+html, body {
+     max-width: 100%;
+     overflow-x: hidden;
+}
+
 /* Box Model Hack */
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 /* Clear fix hack */
@@ -231,19 +237,6 @@ nav {
      flex-direction: column;
      align-items: center;
 }
-
-/* Heather requested this be removed */
-/*
-.horse img {
-     width: 300px;
-     height: 300px;
-     object-fit: cover;
-     object-position: center;
-     border-radius: 50%;
-     border: 5px solid #f0f0f0;
-     margin-bottom: 20px;
-}
-*/
 
 /* New CSS for more rectangular, full picture of horses */
 /* This version does not have object-fit, object-position, border-radius: 50%, fixed-dimensions, or thick-grey border */
@@ -513,15 +506,15 @@ footer {
 
      /* Navigation Switch to Hamburger */
      .hamburger {
-          display: block; /* Show the button */
+          display: block;
      }
 
      .nav-links {
-          display: none; /* Hide links by default */
+          display: none;
           flex-direction: column;
           width: 100%;
           position: absolute;
-          top: 60px; /* Push below the navbar */
+          top: 60px;
           left: 0;
           background-color: var(--white);
           padding: 20px 0;
@@ -529,7 +522,6 @@ footer {
           z-index: 100;
      }
 
-     /* This class is added via JS to show menu */
      .nav-links.active {
           display: flex;
      }
@@ -550,9 +542,48 @@ footer {
           transform: none;
      }
 
-     /* Adjust Gallery for mobile */
      .gallery img {
-          width: 100%; /* Full width images on phone */
+          width: 100%;
           height: auto;
+     }
+
+     footer {
+          flex-direction: column;
+          text-align: center;
+          width: 100%;
+          padding: 30px 15px;
+     }
+
+     .footer-side, .footer-center {
+          width: 100%;
+          margin-bottom: 20px;
+          align-items: center !important; /* Forces all footer items to center */
+          text-align: center !important;
+     }
+
+     /* -- Fix: Padding and Text Wrapping -- */
+     .about-page, .support-page, .contact-page, section {
+          width: 100% !important;
+          padding: 20px 15px !important; /* Adds breathing room on the edges */
+          overflow-wrap: break-word; /* Forces long emails to wrap to next line */
+     }
+
+     .support-page img,
+     .support-page iframe,
+     .gofundme-container,
+     .contact-page img {
+          max-width: 100% !important;
+          height: auto !important;
+     }
+
+     /* -- Fix: Shrink huge contact text -- */
+     .contact-info {
+          font-size: 1.2rem; /* Reduced fromn 2.5rem so it fits on screen */
+          word-break: break-all; /* Ensures email breaks if still too long */
+     }
+
+     .donation-container {
+          flex-direction: column; /* Stacks GoFundMe and QR code if needed */
+          gap: 15px;
      }
 }
