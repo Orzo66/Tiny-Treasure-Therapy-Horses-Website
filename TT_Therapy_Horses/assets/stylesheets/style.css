@@ -482,12 +482,35 @@ footer {
      margin: 5px;
 }
 
-.footer-side a{
+/* Target all links in footer to ensure consistency */
+footer a,
+footer a:visited {
      color: white;
-     padding: 12px 25px;
+     text-decoration: none; /* Removes default underline */
+     padding: 8px 15px; /* Slightly reduced padding for email links */
      border-radius: 50px;
      transition: all 0.3s ease;
      white-space: nowrap;
+     display: inline-block;
+}
+
+/* Hover state for a nice selection feel */
+footer a:hover {
+     color: var(--light-turqoise);
+     background-color: rgba(255, 255, 255, 0.1); /* Subtle highlight background */
+     transform: translateY(-2px); /* Lifts the link slightly */
+}
+
+/* Specific styling for the social media icons to ensure they don't get the text hover background */
+.footer-social a,
+.footer-social a:visited {
+     padding: 0;
+     background-color: transparent;
+}
+
+.footer-social a:hover {
+     background-color: transparent;
+     transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
 
 /******************************************
