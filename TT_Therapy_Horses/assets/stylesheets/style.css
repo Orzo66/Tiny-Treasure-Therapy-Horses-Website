@@ -513,6 +513,26 @@ footer a:hover {
      transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
 
+.footer-logo {
+     width: 80px; /* Adjust size as needed */
+     height: auto;
+     display: block; /* Ensures logo sits on its own line propertly */
+     margin-left: 0 !important;
+     margin-right: 0 !important;
+}
+
+/* Specifically target the email link in the first footer zone */
+.footer-side:first-child a {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Ensure the hover background still looks okay by shifting it slightly */
+.footer-side:first-child a:hover {
+    padding-left: 8px; /* Restores some padding on hover so the background doesn't clip the text */
+    margin-left: -8px;  /* Offsets the padding so the text itself doesn't "jump" to the right */
+}
+
 /******************************************
 /* MEDIA QUERIES
 /*******************************************/
