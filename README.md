@@ -13,4 +13,12 @@ The only JavaScript used in this currently is a function for the Hamburger Menu 
 
 Version 1.1
 
-Version 1.1 has some new changes. I took out the navigatio bar and footer from each HTML page and put them each in their own HTML documents. I then created some new functions using JS that pulls them into each page when the webpage loads. This way, if I ever need to make changes to the footer or navigation bar, I (or another developer) only need to make the change once. I also added some CSS to the media query to fix the footer, as it looked quite brokent in mobile mode, and the brown coloring was filling the whole page if you zoomed out. I also fixed the issue where the text was not all visible in mobile viewing on the **support.html** and the **contact.html**. I also fixed a couple grammmatical mistakes. I added a robots.txt file (even thought there is little to be blocked by crawlers) and sitemap.xml document (so search engines can find and index the content). Website is now live at https://tinytreasurestherapyhorses.com.
+Version 1.1 has some new changes. I took out the navigation bar and footer from each HTML page and put them each in their own HTML documents. I then created some new functions using JS that pulls them into each page when the webpage loads. This way, if I ever need to make changes to the footer or navigation bar, I (or another developer) only need to make the change once. I also added some CSS to the media query to fix the footer, as it looked quite brokent in mobile mode, and the brown coloring was filling the whole page if you zoomed out. I also fixed the issue where the text was not all visible in mobile viewing on the **support.html** and the **contact.html**. I also fixed a couple grammmatical mistakes. I added a robots.txt file (even thought there is little to be blocked by crawlers) and sitemap.xml document (so search engines can find and index the content). Website is now live at https://tinytreasurestherapyhorses.com.
+
+Version 1.2
+
+Added media files as requested by client. I wanted to embed some iframes and have the videos playable on the site. But restrictions on the vidoe sites would not allow me to play the videos. I tried multiple workarounds and all failed. I ended up using giant buttons instead to stick with the theme of the page.
+
+Version 1.3
+
+Added another article that features client and her horses. Added a header that client requested.
