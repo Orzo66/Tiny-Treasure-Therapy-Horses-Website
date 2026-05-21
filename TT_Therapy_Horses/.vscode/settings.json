@@ -1,0 +1,4 @@
+{
+    "js/ts.suggest.enabled": true,
+    "editor.inlineSuggest.enabled": false
+}
